@@ -6,6 +6,8 @@ import codeTheme from './slalom-code-theme';
 
 export * from './layouts';
 
+const colorsArray = [colors.green, colors.magenta];
+
 export default {
   ...theme,
   font: header.join(','),
@@ -25,7 +27,15 @@ export default {
     color: colors.slalom
   },
   li: {
-    color: colors.slalom
+    color: colors.slalom,
+    paddingTop: `20px`
+  },
+  img: {
+    outline: `2px solid ${
+      colorsArray[Math.floor(Math.random() * colorsArray.length)]
+    }`,
+    outlineOffset: `2px`
+    // outline: `5px solid ${colors.green}`
   },
   prism: {
     style: codeTheme

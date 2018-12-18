@@ -2,6 +2,9 @@ const colors = {
   slalom: `#0072C8`,
   babyBlue: `#99C7E9`,
   accent: `#ffb238`,
+  green: `#A6CE38`,
+  magenta: `#B34A9B`,
+  yellow: `#FFE72C`,
   success: `#37b635`,
   warning: `#ec1818`,
   ui: {

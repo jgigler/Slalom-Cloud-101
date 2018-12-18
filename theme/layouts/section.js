@@ -1,7 +1,7 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
-
-import { Center, LogoBoxes } from '../../components';
+import { Logo } from '../../components/logo';
+import { Center } from '../../components';
 import colors from '../colors';
 
 const Container = styled(Center)`
@@ -38,20 +38,37 @@ const Container = styled(Center)`
     `};
 `;
 
-const LogoContainer = styled.div`
+const Overlay = styled.div`
+  width: 100vw;
+  height: 100vh;
   position: absolute;
-
   top: 0;
   left: 0;
+  opacity: 0.9;
+  background-image: linear-gradient(
+    to bottom right,
+    ${colors.slalom} 60%,
+    ${colors.magenta}
+  );
+`;
+const Bg = styled.div`
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url('/images/clouds.jpg');
+  background-position: center;
+  background-size: cover;
 `;
 
 export default function Section({ children, inverted, ...rest }) {
   return (
     <Container inverted={inverted} {...rest}>
-      <LogoContainer>
-        <LogoBoxes inverted={inverted} />
-      </LogoContainer>
-      {children}
+      <Logo />
+      <div style={{ zIndex: 99 }}>{children}</div>
+      <Bg />
+      <Overlay />
     </Container>
   );
 }

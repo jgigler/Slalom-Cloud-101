@@ -37,7 +37,7 @@ const Center = styled.div`
 `;
 
 export function Boxes({ children, inverted }) {
-  let layers = [colors.code.bg, colors.babyBlue, colors.slalom];
+  let layers = [colors.code.bg, colors.babyBlue];
 
   if (inverted) {
     layers = layers.reverse();
@@ -46,16 +46,18 @@ export function Boxes({ children, inverted }) {
   return (
     <Container>
       <Layers>
-        {layers.map((color, index) => (
-          <Layer
-            key={color}
-            style={{
-              top: `${(index === 1 ? -15 : -10) * index}%`,
-              left: `${(index === 1 ? -15 : -10) * index}%`,
-              backgroundColor: color
-            }}
-          />
-        ))}
+        {layers.map((color, index) => {
+          return (
+            <Layer
+              key={color}
+              style={{
+                top: `${(index === 1 ? -12 : -11) * (index + 1)}%`,
+                left: `${(index === 1 ? -12 : -11) * (index + 1)}%`,
+                backgroundColor: color
+              }}
+            />
+          );
+        })}
       </Layers>
       <Center>{children}</Center>
     </Container>

@@ -1,4 +1,15 @@
-import { Main, Section } from '../theme/slalom-theme-mdx';
+import { Main, Section, SectionInverted } from '../theme/slalom-theme-mdx';
+import Logo from '../components/Logo';
+import { Head } from 'mdx-deck';
+import Split from '../theme/layouts/Split';
+import SplitReverse from '../theme/layouts/SplitReverse';
+
+import { List, ListItem } from '../components/lineList';
+
+<Head>
+  <title>Slalom - Cloud 101</title>
+  <link rel="icon" href="/images/favicon.ico" />
+</Head>
 
 export default Main;
 
@@ -8,15 +19,46 @@ export default Main;
 
 ---
 
-export default Section;
+export default SectionInverted;
 
 ## Agenda
 
-<ul>
-  <li>Cloud Computing Characteristics</li>
-  <li>Cloud Vs. On-Premise</li>
-  <li>Cloud Computing Models</li>
-  <li>What is AWS?</li>
-  <li>AWS Services Overview</li>
-  <li>LAMP Architecture in AWS</li>
-</ul>
+<List>
+  <ListItem>Cloud?</ListItem>
+  <ListItem>Cloud Computing Characteristics</ListItem>
+  <ListItem>Cloud Vs. On-Premise</ListItem>
+  <ListItem>Cloud Computing Models</ListItem>
+  <ListItem>What is AWS?</ListItem>
+  <ListItem>AWS Services Overview</ListItem>
+  <ListItem>LAMP Architecture in AWS</ListItem>
+</List>
+
+---
+
+export default Split;
+
+![](https://upload.wikimedia.org/wikipedia/commons/4/4f/Ns1.jpg)
+
+## Nimbus Clouds
+
+Nimbostratus has a diffuse cloud base generally found anywhere from near surface in the low levels to about 3,000 m (9,800 ft) in the middle level of the troposphere.
+
+---
+
+export default SplitReverse;
+
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Cirrus_front_over_Austnesfjorden%2C_Austv%C3%A5g%C3%B8ya%2C_Lofoten%2C_Norway%2C_2015_April.jpg/2880px-Cirrus_front_over_Austnesfjorden%2C_Austv%C3%A5g%C3%B8ya%2C_Lofoten%2C_Norway%2C_2015_April.jpg)
+
+## Cirrus fibratus
+
+The name cirrus fibratus is derived from Latin, meaning "fibrous". These clouds are similar to cirrus uncinus, commonly known as "mares' tails"; however, fibratus clouds do not have tufts or hooks at the end. The filaments are usually separate from one another.
+
+---
+
+export default Split;
+
+![](https://whatsthebigdata.files.wordpress.com/2017/02/cloud_answer.jpg?w=640)
+
+## The New Cloud
+
+You are really just paying to use someone else's giant computers.

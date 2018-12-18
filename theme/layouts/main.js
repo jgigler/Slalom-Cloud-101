@@ -34,9 +34,30 @@ const CenteredHalf = styled(Center)`
   padding-left: 15vw;
 `;
 
-const BlueBg = styled.div`
+const BgContainer = styled.div`
   width: 55vw;
   height: 50vh;
+  position: relative;
+`;
+const Overlay = styled.div`
+  width: 55vw;
+  height: 50vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.5;
+  background-image: linear-gradient(
+    to bottom right,
+    ${colors.magenta},
+    ${colors.slalom}
+  );
+`;
+const Bg = styled.div`
+  width: 55vw;
+  height: 50vh;
+  background-image: url('/images/clouds.jpg');
+  background-position: center;
+  background-size: cover;
   background-color: ${colors.slalom};
 `;
 
@@ -44,7 +65,10 @@ export default function Main({ children }) {
   return (
     <Container>
       <CenteredHalf>{children}</CenteredHalf>
-      <BlueBg />
+      <BgContainer>
+        <Overlay />
+        <Bg />
+      </BgContainer>
     </Container>
   );
 }
