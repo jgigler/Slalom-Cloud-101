@@ -1,0 +1,19 @@
+{
+  "name": "cloud-101",
+  "version": "1.0.0",
+  "description": "Cloud 101 presentation",
+  "main": "index.js",
+  "scripts": {
+    "start": "mdx-deck index.js",
+    "build": "mdx-deck build index.js"
+  },
+  "keywords": [
+    "mdx-deck",
+    "reactjs"
+  ],
+  "author": "Mike Klein <mdavidkleinjr@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "mdx-deck": "^1.8.2"
+  }
+}
