@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "mdx-deck index.js",
-    "build": "mdx-deck build index.js && cp ./favicon.ico ./build/favicon.ico"
+    "build": "mdx-deck build index.js && cp ./favicon.ico ./dist/favicon.ico"
   },
   "keywords": [
     "mdx-deck",
